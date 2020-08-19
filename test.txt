@@ -1,0 +1,5 @@
+{"output": "00000015_MaSo_720p", "email": "myemail@user.com"}
+{"output": "00000015_MaSo_1080p", "email": "myemail@user.com"}
+{"output": "00000015_MaSo_4K", "email": "myemail@user.com"}
+{"output": "00000015_MaSo_1080pPP", "email": "myemail@user.com"}
+{"output": "00000015_MaSo_1080pYT", "email": "myemail@user.com"}

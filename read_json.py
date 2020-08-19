@@ -8,6 +8,7 @@ def read_json():
     
     # Output: {'name': 'Bob', 'languages': ['English', 'Fench']}
     print(data)
+    output={}
     res={}
     res['error']=False
     for element in data:  # iterate on each element of the list
@@ -18,6 +19,14 @@ def read_json():
             res['error']=True
             break
     if res['error']==False:
+        for element in data:
+            output_filename=element['output']
+            email=element['email']
+            output['output']=output_filename
+            output['email']=email
+            print(output)
+            with open("test.txt", "a") as myfile:
+                myfile.write(json.dumps(output)+ "\n")
         create_new_json()
 def create_new_json():
     #f = open("/home/ubuntu/project/json/campaign_id", "r")
@@ -49,5 +58,5 @@ def create_new_json():
     else:
         print("Failure!")
 scheduler = BlockingScheduler()
-scheduler.add_job(read_json, 'interval', seconds=20)
+scheduler.add_job(read_json, 'interval', seconds=10)
 scheduler.start()
